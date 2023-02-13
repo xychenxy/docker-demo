@@ -1,0 +1,16 @@
+{
+	"name": "docker-demo",
+	"version": "1.0.0",
+	"main": "server.js",
+	"license": "MIT",
+	"scripts": {
+		"install-backend": "yarn --cwd backend install",
+		"install-react-app": "yarn --cwd react-app ",
+		"install": "yarn install-backend && yarn install-react-app",
+		"backend-dev": "yarn --cwd backend dev",
+		"react-app-dev": "yarn --cwd react-app dev",
+		"dev": "yarn backend-dev & yarn react-app-dev",
+		"deploy": "yarn --cwd react-app build && yarn --cwd backend start",
+		"deploy-cluster": "yarn --cwd react-app build && yarn --cwd backend cluster"
+	}
+}
